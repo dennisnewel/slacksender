@@ -1,0 +1,8 @@
+version: '2'
+services:
+  slack:
+    build:
+      context: .
+      dockerfile: slacksender.Dockerfile
+    cached: true
+    encrypted_env_file: slacksender.env.encrypted

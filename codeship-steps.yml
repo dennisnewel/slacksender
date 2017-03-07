@@ -1,0 +1,9 @@
+- type: serial
+  name: production
+  tag: master
+  steps:
+    - service: api
+      command: ./test.sh
+    - service: slack
+      name: slack notification
+      command: slack chat send -tx "testing on master successful" -ch notifications --color good
