@@ -11,6 +11,8 @@ You'll need this to be able to push messages to your slack team.
 1. Go to the [Slack oauth test tokens](https://api.slack.com/docs/oauth-test-tokens) and generate a new token for your team. Unfortunately, there's no other simple way of getting a token without implementing full oauth in this slack sender app
 2. Copy the generated token and add it to the slacksender.env file
 
+Note that this is not their recommended way to integrate with slack, but that's what's used by the CLI used in the image.
+
 ## 2. encrypt the slacksender.env file ##
 
 Since you shouldn't be checking in or storing secrets in plain text, we'll make use of the Codeship feature to encrypt variables. Follow the instructions on the great [Tutorial: Encrypting environemnt variables](https://documentation.codeship.com/pro/getting-started/encryption/) to do this.
@@ -49,3 +51,4 @@ Here's an example of how slacksender could be used in your `codeship-steps.yml` 
       name: slack notification
       command: slack chat send -tx "testing on master successful" -ch notifications --color good
 ```
+
