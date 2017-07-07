@@ -56,4 +56,5 @@ Here's an example of how slacksender could be used in your `codeship-steps.yml` 
 
 * Tra-la-laaaa
 * Splash
+* Hey!?
 
