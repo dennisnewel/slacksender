@@ -51,3 +51,6 @@ Here's an example of how slacksender could be used in your `codeship-steps.yml` 
       name: slack notification
       command: slack chat send -tx "testing on master successful" -ch notifications --color good
 ```
+
+# Ignore everything below this line #
+This is just used for testing
